@@ -124,5 +124,9 @@ jobs:
           key: ${{ secrets.VM_SSH_KEY }}
           script: |
             sudo systemctl restart mlops-serve
-            sleep 5
-            curl -sf http://localhost:8000/health && echo "Health check passed." || exit 1
+            for i in $(seq 1 10); do
+              sleep 3
+              curl -sf http://localhost:8000/health && echo "Health check passed." && exit 0
+              echo "Attempt $i failed, retrying..."
+            done
+            echo "Health check failed after 10 attempts." && exit 1
