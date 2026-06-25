@@ -2,7 +2,6 @@
 
 **Sinh viên:** Vũ Quang Bảo  
 **MSSV:** 2A202600610  
-**Môn:** AIInAction — VinUni  
 **Cloud Provider:** AWS (S3 + EC2 t3.micro, us-east-1)  
 **Repo:** https://github.com/BaoVu2k4/Day21-Track2-CI-CD-for-AI-Systems
 
